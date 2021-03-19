@@ -67,7 +67,19 @@ module.exports = (env) => {
                     test: /\.svg$/,
                     loader: "svg-inline-loader",
                 },
+                {
+                    test: /\.svelte$/,
+                    exclude: /node_modules/,
+                    use: "svelte-loader",
+                },
             ],
+        },
+        resolve: {
+            alias: {
+                svelte: path.resolve("node_modules", "svelte"),
+            },
+            extensions: [".wasm", ".mjs", ".js", ".json", ".svelte"],
+            mainFields: ["svelte", "browser", "module", "main"],
         },
         devServer: {
             port: "8000",
