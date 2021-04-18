@@ -13,6 +13,15 @@ module.exports = async (env, argv) => {
     // Correct moment alias
     config.resolve.alias.moment = path.resolve(__dirname, "node_modules/moment"); // prettier-ignore
 
+    // Add Svelte support
+    config.module.rules.push({
+        test: /\.svelte$/,
+        use: "svelte-loader",
+    });
+    config.resolve.alias.svelte = path.resolve("node_modules", "svelte");
+    config.resolve.extensions = [".wasm", ".mjs", ".js", ".json", ".svelte"];
+    config.resolve.mainFields = ["svelte", "browser", "module", "main"];
+
     if (argv.mode === "production") {
         // Also create minified bundles along with the non-minified ones.
         config.entry["bundle.min"] = path.resolve(__dirname, "bundle-config.js"); // prettier-ignore

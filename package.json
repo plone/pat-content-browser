@@ -1,9 +1,9 @@
 {
-    "name": "pat-PATTERN_TEMPLATE",
+    "name": "pat-content-browser",
     "version": "1.0.0",
-    "description": "A pattern for PATTERN_TEMPLATE",
+    "description": "A pattern for content-browser",
     "license": "MIT",
-    "main": "./src/PATTERN_TEMPLATE.js",
+    "main": "./src/content-browser.js",
     "dependencies": {
         "@patternslib/patternslib": "4"
     },
@@ -38,6 +38,8 @@
         "sass": "^1.32.8",
         "sass-loader": "^10.1.1",
         "style-loader": "^1.2.1",
+        "svelte": "^3.35.0",
+        "svelte-loader": "^3.0.0",
         "svg-inline-loader": "^0.8.2",
         "terser-webpack-plugin": "^2.3.6",
         "webpack": "^4.43.0",
@@ -69,9 +71,9 @@
         "name": "Syslab GesmbH",
         "email": "dev@syslab.com"
     },
-    "homepage": "https://gitub.com/patternslib/pat-PATTERN_TEMPLATE",
+    "homepage": "https://github.com/plone/pat-content-browser",
     "repository": {
         "type": "git",
-        "url": "https://gitub.com/patternslib/pat-PATTERN_TEMPLATE.git"
+        "url": "https://github.com/plone/pat-content-browser.git"
     }
 }
