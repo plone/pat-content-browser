@@ -1,13 +1,21 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>content-browser demo</title>
-    <script src="/dist/bundle.js" type="text/javascript" charset="utf-8"></script>
-  </head>
-  <body>
+<html lang="en">
+<head>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width,initial-scale=1'>
+	<title>Miller Columns Browser</title>
 
-    <div class="pat-content-browser"></div>
+	<!-- <link rel='icon' type='image/png' href='favicon.png'> -->
+	<!-- <link rel='stylesheet' href='global.css'> -->
+	<!-- link rel='stylesheet' href='miller-columns-browser.css'-->
+	<script defer src='/dist/bundle.js'></script>
+</head>
 
-  </body>
+<body>
+
+  <div class="pat-content-browser" data-pat-content-browser="max_depth:3; vocabulary_url:relateditems-test.json"></div>
+
+  <miller-columns-browser max_depth="3" vocabulary_url="test-relateditems.json"></miller-columns-browser>
+
+</body>
 </html>

@@ -1,18 +1,12 @@
-# pat-content-browser
+---
+permalink: "pat/miller-columns-browser/"
+title: Miller Columns Browser
+---
 
-## Documentation
+# Content Browser
 
-This is simple pattern project bootstrap template.
+```html
+<div class="pat-contentbrowser" data-pat-contentbrowser="max-depth:1; vocabulary-url:src/test-relateditems.json"></div>
+```
 
-Usage:
-
-    ./create.sh PROJECTNAME
-
-This will create a directory within this directory with the name `pat-PROJECTNAME`.
-You can use it for developing a new pattern.
-
-### Options reference
-
-| Property       | Default Value | Values | Type              | Description                   |
-| -------------- | ------------- | ------ | ----------------- | ----------------------------- |
-| example_option | [1, 2, 3]     |        | Array of integers | Example configuration option. |
+<div class="pat-contentbrowser" data-pat-contentbrowser="max-depth:1; vocabulary-url:src/test-relateditems.json"></div>
