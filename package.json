@@ -1,6 +1,6 @@
 {
-    "name": "pat-content-browser",
-    "version": "1.0.0",
+    "name": "@patternslib/pat-content-browser",
+    "version": "0.9.0",
     "description": "A pattern for content-browser",
     "license": "MIT",
     "main": "./src/content-browser.js",
