@@ -47,8 +47,8 @@ bundle: stamp-yarn
 #
 # .PHONY: release-patch
 # release-patch: check
-# 	npx release-it --dry-run --ci && \
-# 		npx release-it --ci
+# 	npx release-it patch --dry-run --ci && \
+# 		npx release-it patch --ci
 
 
 .PHONY: serve
