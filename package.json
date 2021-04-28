@@ -5,7 +5,9 @@
     "license": "MIT",
     "main": "./src/content-browser.js",
     "dependencies": {
-        "@patternslib/patternslib": "4"
+        "@patternslib/patternslib": "4",
+        "svelte-keydown": "^0.2.1",
+        "svelte-scrollto": "^0.2.0"
     },
     "devDependencies": {
         "@babel/core": "^7.13.15",
