@@ -5,7 +5,6 @@ import Parser from "@patternslib/patternslib/src/core/parser";
 import ContentBrowser from "./app/ContentBrowser.svelte";
 import SelectedItems from "./app/SelectedItems.svelte";
 
-
 const parser = new Parser("contentbrowser");
 
 parser.addArgument(
@@ -44,18 +43,17 @@ parser.addArgument("max-selectionsize", "9999");
 // parser.addArgument("selectable-types", [],[], true);
 //parser.addArgument("selectable-types", [],[], true);
 
-
 export default Base.extend({
     name: "contentbrowser",
     trigger: ".pat-contentbrowser",
     //parser: "mockup",
 
     init: function () {
-        console.log("init ContentBrowser patter with options: ", this.options)
+        console.log("init ContentBrowser pattern with options: ", this.options);
         this.options = parser.parse(this.el, this.options);
 
         const contentBrowserEl = document.createElement("div");
-        contentBrowserEl.classList.add('content-browser-wrapper');
+        contentBrowserEl.classList.add("content-browser-wrapper");
         const bodyElement = document.querySelector("body");
         bodyElement.append(contentBrowserEl);
 
@@ -71,10 +69,10 @@ export default Base.extend({
         });
 
         const selectedItemsEl = document.createElement("div");
-        selectedItemsEl.classList.add('selected-items');
+        selectedItemsEl.classList.add("selected-items");
         this.el.parentNode.insertBefore(selectedItemsEl, this.el);
 
-        this.el.setAttribute('style', 'display: none');
+        this.el.setAttribute("style", "display: none");
         this.component_instance_sel_items = new SelectedItems({
             target: selectedItemsEl,
             props: {
