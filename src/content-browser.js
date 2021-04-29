@@ -5,7 +5,7 @@ import Parser from "@patternslib/patternslib/src/core/parser";
 import ContentBrowser from "./app/ContentBrowser.svelte";
 import SelectedItems from "./app/SelectedItems.svelte";
 
-const parser = new Parser("contentbrowser");
+const parser = new Parser("content-browser");
 
 parser.addArgument(
     "vocabulary-url",
@@ -44,12 +44,12 @@ parser.addArgument("max-selectionsize", "9999");
 //parser.addArgument("selectable-types", [],[], true);
 
 export default Base.extend({
-    name: "contentbrowser",
-    trigger: ".pat-contentbrowser",
+    name: "content-browser",
+    trigger: ".pat-content-browser",
     //parser: "mockup",
 
     init: function () {
-        console.log("init ContentBrowser pattern with options: ", this.options);
+        console.log("init content-browser pattern with options: ", this.options);
         this.options = parser.parse(this.el, this.options);
 
         const contentBrowserEl = document.createElement("div");
@@ -57,7 +57,7 @@ export default Base.extend({
         const bodyElement = document.querySelector("body");
         bodyElement.append(contentBrowserEl);
 
-        console.log("pat-contentbrowser options", this.options);
+        console.log("pat-content-browser options", this.options);
         this.component_instance_browser = new ContentBrowser({
             target: contentBrowserEl,
             props: {

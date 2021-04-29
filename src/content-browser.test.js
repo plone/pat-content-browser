@@ -1,5 +1,5 @@
 import "regenerator-runtime/runtime"; // needed for ``await`` support
-import pattern from "./contentbrowser";
+import pattern from "./content-browser";
 import utils from "@patternslib/patternslib/src/core/utils";
 
 describe("pat-content-browser", () => {
