@@ -4,9 +4,13 @@ module.exports = {
     watchPlugins: ["jest-watch-typeahead/filename", "jest-watch-typeahead/testname"],
     transform: {
         "^.+\\.[t|j]sx?$": "babel-jest",
+        "\\.svelte$": "svelte-jest",
     },
+    moduleFileExtensions: ["js", "json", "svelte"],
     moduleNameMapper: {
         "\\.(css|less|sass|scss)$": "identity-obj-proxy",
     },
-    transformIgnorePatterns: ["/node_modules/(?!.*patternslib/*).+\\.[t|j]sx?$"],
+    transformIgnorePatterns: [
+        "/node_modules/(?!.*patternslib/*)(?!(svelte.*)/).+\\.[t|j]sx?$",
+    ],
 };
