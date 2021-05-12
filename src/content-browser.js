@@ -11,6 +11,7 @@ parser.addArgument(
     "vocabulary-url",
     "http://localhost:8080/Plone15/@@getVocabulary?name=plone.app.vocabularies.Catalog"
 );
+
 parser.addArgument(
     "attributes",
     [
