@@ -4,11 +4,13 @@ const patternslib_config = require("@patternslib/patternslib/webpack/webpack.con
 const svelte_config = require("./webpack.svelte");
 
 module.exports = async (env, argv) => {
-    const config = svelte_config(env, argv, patternslib_config(env, argv));
-
-    config.entry = {
-        bundle: path.resolve(__dirname, "bundle-config.js"),
+    let config = {
+        entry: {
+            bundle: path.resolve(__dirname, "bundle-config.js"),
+        },
     };
+
+    config = svelte_config(env, argv, patternslib_config(env, argv, config));
     config.output.path = path.resolve(__dirname, "dist/");
 
     return config;
