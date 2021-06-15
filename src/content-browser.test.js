@@ -7,7 +7,7 @@ describe("pat-content-browser", () => {
         document.body.innerHTML = "";
     });
 
-    it("is initialized correctly", async (done) => {
+    it("is initialized correctly", async () => {
         document.body.innerHTML = `<div class="pat-content-browser" />`;
 
         pattern.init(document.querySelector(".pat-content-browser"));
@@ -15,7 +15,5 @@ describe("pat-content-browser", () => {
 
         expect(document.querySelector(".content-browser-selected-items")).toBeTruthy();
         expect(document.querySelector(".content-browser-wrapper")).toBeTruthy();
-
-        done();
     });
 });

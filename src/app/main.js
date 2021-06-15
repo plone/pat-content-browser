@@ -1,4 +1,4 @@
-import MillerColumnsBrowser from './MillerColumnsBrowser.svelte';
+//import MillerColumnsBrowser from './MillerColumnsBrowser.svelte';
 
 // let targets = document.getElementsByClassName("pat-miller-columns-browser");
 
